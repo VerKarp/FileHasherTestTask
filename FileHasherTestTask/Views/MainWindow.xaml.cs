@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace FileHasherTestTask
+namespace FileHasherTestTask.Views
 {
     public partial class MainWindow : Window
     {
