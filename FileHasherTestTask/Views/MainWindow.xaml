@@ -31,10 +31,13 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <Button Grid.Row="2" Content="Высчитать хэш" />
+        <Button Grid.Row="2" Content="Высчитать хэш" 
+                Command="{Binding HashFileCommand}"
+                Margin="3"
+                FontSize="18"/>
 
         <StatusBar Grid.Row="3">
-            <TextBlock />
+            <TextBlock Text="{Binding Status}" FontSize="14"/>
         </StatusBar>
     </Grid>
 </Window>
