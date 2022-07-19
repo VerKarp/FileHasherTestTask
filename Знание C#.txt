@@ -1,0 +1,15 @@
+1) 26
+2) Определение дефектов, которые больше не валидны.
+Если поменять FirstOrDefault() на First(), то будет генерироваться исключение, если не будет найден элемент по заданному условию.
+3) 26
+4) private unsafe void SimpleCopy(CoordinateItem* ccdItem, out double odometr)
+        {
+            odometr = ccdItem->Odometr;
+        }
+5) Ошибка приведения currentValue, которая будет int к value (ushort?). Нужно явное приведение.
+Результатом будет запись в бинарный файл 1000 нулей.
+6) false
+true
+7) O
+e
+\two
