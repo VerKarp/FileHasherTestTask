@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mv="clr-namespace:FileHasherTestTask.ViewModels"
-        Title="{Binding Title}" Height="400" Width="600">
+        Title="File Hasher" Height="400" Width="600">
 
     <Window.DataContext>
         <mv:MainWindowVM/>
@@ -18,9 +18,17 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBox Grid.Row="0"/>
+        <TextBox Grid.Row="0" FontSize="18" Text="{Binding Path,
+            UpdateSourceTrigger=PropertyChanged}"
+                 Padding="3"/>
 
-        <ListBox Grid.Row="1">
+        <ListBox Grid.Row="1" ItemsSource="{Binding Files}"
+                 SelectedItem="{Binding SelectedFile}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
 
         <Button Grid.Row="2" Content="Высчитать хэш" />
